@@ -4,7 +4,7 @@
 
 1. Creamos la maquina EC2 , con las siguientes configuraciones:
 	-> Http y Https habilitados.
-	-> Script Bash.
+	-> Script Bash (V7 Dotnet).
 	-> Configuracion segun practica.
 2. Creamos un proyecto MVC V7.
 3. Descargamos los Nuggets:
@@ -14,3 +14,36 @@
 5. Configuramos el appsetting.
 6. Añadimos dependencias en el program.
 7. Configuramos el Layout y comprobamos la funcionalidad de la App.
+
+8. Nos conectamos al ec2 seguimos los siguiente pasos:
+	-> sudo su 
+	-> cd /etc/pki/tls/certs 
+	-> sudo ./make-dummy-cert localhost.crt 
+	-> mkdir /var/core 
+	-> cd /var/core 
+	-> git clone URL.git
+	-> dotnet restore, build , y demas pasos hasta lanzarlo.
+9. Comprobamos y deberia ir todo OK.
+
+
+================================
+=======    S3(Buckets)    ======
+================================
+
+Fin: Nos permite subir una imagen a nuestro s3 desde la App y poder visualizarla.
+
+1. Seguir pasos de AWS/ApiGateway Correctamente para crear el S3.
+	-> Damos un nombre , habilitamos el ACL , quitamos el chech de bloqueo de acceso publico.
+	-> Una vez creado nos vamos al bucket y en la opcion Permisos.
+	-> Creamos las politicas y comprobamos el acceso mediante la URL.
+2. Configuramos appsetting.
+3. Injectamos el IConfiguration en el ViewImports , para poder utilizar las imaganes dentro de las vistas.
+(Recuerda que las imagenes de pelismysqlv2 solo tienen el nombre).
+4. Descargamos algunos nuggets:
+	-> AWSSDK.Extensions.NETCore.Setu
+	-> AWSSDK.S3
+5. Creamos un nuevo servicio ServiceStorageAWS.
+6. Modificamos el view de create.
+7. Incluimos el serviceStorage en el controller y modificamos el post.
+8. Añadimos dependencias en program.cs.
+9. Comprobamos que funciona y se sube al s3.

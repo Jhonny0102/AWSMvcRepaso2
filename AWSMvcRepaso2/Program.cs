@@ -1,13 +1,16 @@
+using Amazon.S3;
 using AWSMvcRepaso2.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddAWSService<IAmazonS3>();
+
+builder.Services.AddTransient<ServiceSeries>();
+builder.Services.AddTransient<ServiceStorageAWS>();
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-//
-builder.Services.AddTransient<ServiceSeries>();
-//
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

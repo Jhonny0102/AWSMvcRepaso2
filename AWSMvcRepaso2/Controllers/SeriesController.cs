@@ -7,9 +7,11 @@ namespace AWSMvcRepaso2.Controllers
     public class SeriesController : Controller
     {
         private ServiceSeries service;
-        public SeriesController(ServiceSeries service)
+        private ServiceStorageAWS serviceStorage;
+        public SeriesController(ServiceSeries service, ServiceStorageAWS serviceStorage)
         {
             this.service = service;
+            this.serviceStorage = serviceStorage;
         }
 
         public async Task<IActionResult> Index()
@@ -29,8 +31,13 @@ namespace AWSMvcRepaso2.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Create(Serie serie)
+        public async Task<IActionResult> Create(Serie serie, IFormFile file)
         {
+            serie.Imagen= file.FileName;
+            using (Stream stream = file.OpenReadStream())
+            {
+                await this.serviceStorage.UploadFileAsync(file.FileName, stream);
+            }
             await this.service.CreateSerieAsync(serie);
             return RedirectToAction("Index");
         }
