@@ -47,3 +47,4 @@ Fin: Nos permite subir una imagen a nuestro s3 desde la App y poder visualizarla
 7. Incluimos el serviceStorage en el controller y modificamos el post.
 8. Añadimos dependencias en program.cs.
 9. Comprobamos que funciona y se sube al s3.
+10. Seguimos los pasos para desplegarlo en el EC2 y comprobar funcionalidad.
