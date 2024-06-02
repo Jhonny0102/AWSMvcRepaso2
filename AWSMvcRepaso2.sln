@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWSMvcRepaso2", "AWSMvcRepaso2\AWSMvcRepaso2.csproj", "{147F9FCB-8517-4764-8E32-70F052C2BAEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{147F9FCB-8517-4764-8E32-70F052C2BAEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{147F9FCB-8517-4764-8E32-70F052C2BAEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{147F9FCB-8517-4764-8E32-70F052C2BAEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{147F9FCB-8517-4764-8E32-70F052C2BAEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E0A8D73-4593-454C-92B2-77962EC058E5}
+	EndGlobalSection
+EndGlobal

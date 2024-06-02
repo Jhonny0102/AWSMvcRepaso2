@@ -1,0 +1,16 @@
+﻿================================
+=======      Mvc EC2      ======
+================================
+
+1. Creamos la maquina EC2 , con las siguientes configuraciones:
+	-> Http y Https habilitados.
+	-> Script Bash.
+	-> Configuracion segun practica.
+2. Creamos un proyecto MVC V7.
+3. Descargamos los Nuggets:
+	-> Microsoft.AspNet.WebApi.Client
+	-> Newtonsoft.Json
+4. Creamos nuestros models (Forma simple) , services y controller.
+5. Configuramos el appsetting.
+6. Añadimos dependencias en el program.
+7. Configuramos el Layout y comprobamos la funcionalidad de la App.
